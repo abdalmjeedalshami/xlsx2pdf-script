@@ -11,7 +11,6 @@ venv/
 Thumbs.db
 
 # Input and output folders (optional)
-input/
 output/
 
 # Logs

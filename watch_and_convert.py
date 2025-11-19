@@ -5,8 +5,14 @@ import win32com.client as win32
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
-WATCH_FOLDER = r"D:/IMS Document/zz_watch_and_convert/input"
-OUTPUT_FOLDER = r"D:/IMS Document/zz_watch_and_convert/output"
+
+# Get the directory where the script is located
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# Define input and output folders relative to the script location
+WATCH_FOLDER = os.path.join(BASE_DIR, "input")
+OUTPUT_FOLDER = os.path.join(BASE_DIR, "output")
+
 
 
 def convert_excel_to_pdf(xlsx_path):
